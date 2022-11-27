@@ -71,15 +71,21 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder, butto
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: flex-end;
   bottom: 0.5rem;
   right: 1.5rem;
 }
 .quick-actions li {
+  padding: 0.5rem;
   display: flex;
+  justify-content: end;
   align-items: center;
-  gap: 0.5rem;
+  overflow: hidden;
+  transition: width 0.2s;
+  width: 3rem;
+}
+.quick-actions li:hover {
+  width: 13rem;
 }
 .quick-actions label,
 .quick-actions input[type=button],
@@ -93,10 +99,11 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder, butto
   font-size: 90%;
   text-transform: uppercase;
   font-weight: 600;
-  transition: width 2s;
   line-height: 1.5em;
   width: 9em;
+  margin-inline-end: 1rem;
   text-align: center;
+  white-space: nowrap;
 }
 .quick-actions button {
   display: block;

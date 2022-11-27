@@ -79,15 +79,22 @@ input, select, button {
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: $gap;
   align-items: flex-end;
   bottom: $gap * .5;
   right: $gap * 1.5;
 
   li {
+    padding: $gap * .5;
     display: flex;
+    justify-content: end;
     align-items: center;
-    gap: $gap * .5;
+    overflow: hidden;
+    transition: width .2s;
+    width: 3rem;
+
+    &:hover {
+      width: 13rem;
+    }
   }
 
   label,
@@ -103,10 +110,11 @@ input, select, button {
     font-size: 90%;
     text-transform: uppercase;
     font-weight: 600;
-    transition: width 2s;
     line-height: 1.5em;
     width: 9em;
+    margin-inline-end: $gap;
     text-align: center;
+    white-space: nowrap;
   }
 
   button {
