@@ -1,12 +1,26 @@
 $shadow: 0 .1rem .3rem black;
+$gap: 1rem;
+$text-color: hsl(0 0 20%);
 
 body {
   background-color: #888;
   margin: 0;
-  height: 100vh;
+  padding: $gap;
+  max-height: 100vh;
   font-size: 16px;
   font-family: Cordana, sans-serif;
-  color: hsl(0 0 20%);
+  color: $text-color;
+  position: relative;
+
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background-image: linear-gradient(180deg, hsl(0 0 20% / 70%), transparent);
+    content: "";
+  }
 }
 
 ul {
@@ -14,19 +28,20 @@ ul {
   padding-inline-start: 0;
 }
 
-input, select {
+input, select, button {
   background-color: transparent;
   border: none;
-  border-bottom: thin solid hsl(0 0 20%);
+  border-bottom: thin solid $text-color;
   cursor: pointer;
   height: 2em;
   font-weight: 600;
+  color: $text-color;
 
   &[name="entry-type"] {
     border-bottom-color: transparent;
 
     &:hover {
-      border-bottom-color: hsl(0 0 20%);
+      border-bottom-color: $text-color;
     }
   }
 
@@ -36,23 +51,23 @@ input, select {
 }
 
 .card {
-  padding: 1rem;
+  padding: $gap;
   background: hsl(0 0 70%);
   box-shadow: $shadow;
-  border-radius: 1rem;
+  border-radius: $gap;
 }
 
-.filter {
-  margin: 1rem;
+.header-cards {
   position: sticky;
-  top: 1rem;
+  top: $gap;
+  margin-bottom: $gap;
 }
 
 .planned-entries {
-  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem;
+  gap: $gap;
+  padding-bottom: $gap;
 }
 
 .entry {
@@ -64,18 +79,20 @@ input, select {
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: $gap;
   align-items: flex-end;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: $gap * .5;
+  right: $gap * 1.5;
 
   li {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: $gap * .5;
   }
 
-  label,input[type="button"] {
+  label,
+  input[type="button"],
+  button {
     background-color: hsl(0 0 80%);
   }
 
@@ -89,10 +106,11 @@ input, select {
     transition: width .2s;
   }
 
-  input[type="button"] {
+  button {
     display: block;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
+    font-size: 120%;
     height: 3rem;
     box-shadow: $shadow;
   }

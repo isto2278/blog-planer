@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devoted Nonsense</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/01313f670a.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <main>
-    <section class="filter card">
-      <input type="search" name="entry-filter" id="">
+    <section class="header-cards">
+      <section class="filter card">
+        <input type="search" name="entry-filter" id="">
+      </section>
     </section>
     <section class="planned-entries">
       <article class="entry card">
@@ -106,9 +109,9 @@
     </section>
     <section>
       <ul class="quick-actions">
-        <li class="quick-action__button" title=""><label for="">Neues Review</label><input type="button" value=""></li>
-        <li class="quick-action__button" title=""><label for="">Neuer Stream</label><input type="button" value=""></li>
-        <li class="quick-action__button" title=""><label for="">Neuer Artikel</label><input type="button" value=""></li>
+        <li class="quick-action__button" title=""><label for="">Neues Review</label><button><i class="fa-solid fa-star"></i></button></li>
+        <li class="quick-action__button" title=""><label for="">Neuer Stream</label><button><i class="fa-solid fa-play"></i></button></li>
+        <li class="quick-action__button" title=""><label for="">Neuer Artikel</label><button><i class="fa-solid fa-file-lines"></i></button></li>
       </ul>
     </section>
   </main>

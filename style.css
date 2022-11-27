@@ -1,10 +1,21 @@
 body {
   background-color: #888;
   margin: 0;
-  height: 100vh;
+  padding: 1rem;
+  max-height: 100vh;
   font-size: 16px;
   font-family: Cordana, sans-serif;
   color: hsl(0deg, 0%, 20%);
+  position: relative;
+}
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  background-image: linear-gradient(180deg, hsla(0deg, 0%, 20%, 0.7), transparent);
+  content: "";
 }
 
 ul {
@@ -12,21 +23,22 @@ ul {
   padding-inline-start: 0;
 }
 
-input, select {
+input, select, button {
   background-color: transparent;
   border: none;
   border-bottom: thin solid hsl(0deg, 0%, 20%);
   cursor: pointer;
   height: 2em;
   font-weight: 600;
+  color: hsl(0deg, 0%, 20%);
 }
-input[name=entry-type], select[name=entry-type] {
+input[name=entry-type], select[name=entry-type], button[name=entry-type] {
   border-bottom-color: transparent;
 }
-input[name=entry-type]:hover, select[name=entry-type]:hover {
+input[name=entry-type]:hover, select[name=entry-type]:hover, button[name=entry-type]:hover {
   border-bottom-color: hsl(0deg, 0%, 20%);
 }
-input[name=game-title]::placeholder, select[name=game-title]::placeholder {
+input[name=game-title]::placeholder, select[name=game-title]::placeholder, button[name=game-title]::placeholder {
   content: "Spieltitel";
 }
 
@@ -37,17 +49,17 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder {
   border-radius: 1rem;
 }
 
-.filter {
-  margin: 1rem;
+.header-cards {
   position: sticky;
   top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .planned-entries {
-  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .entry {
@@ -59,9 +71,9 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder {
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: flex-end;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
   right: 1.5rem;
 }
 .quick-actions li {
@@ -69,7 +81,9 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder {
   align-items: center;
   gap: 0.5rem;
 }
-.quick-actions label, .quick-actions input[type=button] {
+.quick-actions label,
+.quick-actions input[type=button],
+.quick-actions button {
   background-color: hsl(0deg, 0%, 80%);
 }
 .quick-actions label {
@@ -81,10 +95,11 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder {
   font-weight: 600;
   transition: width 0.2s;
 }
-.quick-actions input[type=button] {
+.quick-actions button {
   display: block;
   border-radius: 50%;
   aspect-ratio: 1/1;
+  font-size: 120%;
   height: 3rem;
   box-shadow: 0 0.1rem 0.3rem black;
 }
