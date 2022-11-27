@@ -87,13 +87,16 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder, butto
   background-color: hsl(0deg, 0%, 80%);
 }
 .quick-actions label {
-  padding: 0.5rem 1rem;
+  padding: 0.3em 0.75em;
   border-radius: 0.5em;
   box-shadow: 0 0.1rem 0.3rem black;
   font-size: 90%;
   text-transform: uppercase;
   font-weight: 600;
   transition: width 0.2s;
+  line-height: 1.5em;
+  width: 9em;
+  text-align: center;
 }
 .quick-actions button {
   display: block;

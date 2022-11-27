@@ -97,13 +97,16 @@ input, select, button {
   }
 
   label {
-    padding: .5rem 1rem;
+    padding: .3em .75em;
     border-radius: .5em;
     box-shadow: $shadow;
     font-size: 90%;
     text-transform: uppercase;
     font-weight: 600;
     transition: width .2s;
+    line-height: 1.5em;
+    width: 9em;
+    text-align: center;
   }
 
   button {
