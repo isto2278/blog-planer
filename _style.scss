@@ -51,7 +51,7 @@ input, select, button {
 }
 
 .card {
-  padding: $gap;
+  padding: $gap $gap * 2;
   background: hsl(0 0 70%);
   box-shadow: $shadow;
   border-radius: $gap;
@@ -103,7 +103,7 @@ input, select, button {
     font-size: 90%;
     text-transform: uppercase;
     font-weight: 600;
-    transition: width .2s;
+    transition: width 2s;
     line-height: 1.5em;
     width: 9em;
     text-align: center;

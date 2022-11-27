@@ -43,7 +43,7 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder, butto
 }
 
 .card {
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: hsl(0deg, 0%, 70%);
   box-shadow: 0 0.1rem 0.3rem black;
   border-radius: 1rem;
@@ -93,7 +93,7 @@ input[name=game-title]::placeholder, select[name=game-title]::placeholder, butto
   font-size: 90%;
   text-transform: uppercase;
   font-weight: 600;
-  transition: width 0.2s;
+  transition: width 2s;
   line-height: 1.5em;
   width: 9em;
   text-align: center;
