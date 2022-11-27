@@ -6,7 +6,7 @@
     {
       "label": "compile-scss",
       "type": "shell",
-      "command": "sass --watch _style.scss style.css",
+      "command": "sass --watch style.scss style.css",
       "group": {
         "kind": "build",
         "isDefault": true
