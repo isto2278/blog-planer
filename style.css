@@ -38,6 +38,9 @@ input[name=entry-type], select[name=entry-type], button[name=entry-type] {
 input[name=entry-type]:hover, select[name=entry-type]:hover, button[name=entry-type]:hover {
   border-bottom-color: hsl(0deg, 0%, 20%);
 }
+input[name=game-title], select[name=game-title], button[name=game-title] {
+  font-size: 110%;
+}
 input[name=game-title]::placeholder, select[name=game-title]::placeholder, button[name=game-title]::placeholder {
   content: "Spieltitel";
 }

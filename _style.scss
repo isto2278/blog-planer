@@ -39,14 +39,18 @@ input, select, button {
 
   &[name="entry-type"] {
     border-bottom-color: transparent;
-
+    
     &:hover {
       border-bottom-color: $text-color;
     }
   }
 
-  &[name="game-title"]::placeholder {
-    content: "Spieltitel";
+  &[name="game-title"] {
+    font-size: 110%;
+
+    &::placeholder {
+      content: "Spieltitel";
+    }
   }
 }
 

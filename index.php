@@ -17,7 +17,7 @@
     </section>
     <section class="planned-entries">
       <?php
-        for($i=0;$i<10;$i++) {
+        for($i=0;$i<3;$i++) {
           include "php/entry.php";
         }
       ?>
