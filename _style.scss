@@ -1,5 +1,103 @@
-$color: red;
+$shadow: 0 .1rem .3rem black;
 
 body {
-  background-color: $color;
+  background-color: #888;
+  margin: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family: Cordana, sans-serif;
+  color: hsl(0 0 20%);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+li {
+
+}
+
+input, select {
+  background-color: transparent;
+  border: none;
+  border-bottom: thin solid hsl(0 0 20%);
+  cursor: pointer;
+  height: 2em;
+  font-weight: 600;
+
+  &[name="entry-type"] {
+    border-bottom-color: transparent;
+
+    &:hover {
+      border-bottom-color: hsl(0 0 20%);
+    }
+  }
+
+  &[name="game-title"]::placeholder {
+    content: "Spieltitel";
+  }
+}
+
+.card {
+  padding: 1rem;
+  background: hsl(0 0 70%);
+  box-shadow: $shadow;
+  border-radius: 1rem;
+}
+
+.filter {
+  margin: 1rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.planned-entries {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.entry {
+  display: grid;
+  grid-gap: .5em;
+}
+
+.quick-actions {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-end;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  label,input[type="button"] {
+    background-color: hsl(0 0 80%);
+  }
+
+  label {
+    padding: .5rem;
+    border-radius: .5em;
+    box-shadow: $shadow;
+    font-size: 90%;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: width .2s;
+  }
+
+  input[type="button"] {
+    display: block;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: 3rem;
+    box-shadow: $shadow;
+  }
 }

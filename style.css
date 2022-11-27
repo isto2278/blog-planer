@@ -1,0 +1,92 @@
+body {
+  background-color: #888;
+  margin: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family: Cordana, sans-serif;
+  color: hsl(0deg, 0%, 20%);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+input, select {
+  background-color: transparent;
+  border: none;
+  border-bottom: thin solid hsl(0deg, 0%, 20%);
+  cursor: pointer;
+  height: 2em;
+  font-weight: 600;
+}
+input[name=entry-type], select[name=entry-type] {
+  border-bottom-color: transparent;
+}
+input[name=entry-type]:hover, select[name=entry-type]:hover {
+  border-bottom-color: hsl(0deg, 0%, 20%);
+}
+input[name=game-title]::placeholder, select[name=game-title]::placeholder {
+  content: "Spieltitel";
+}
+
+.card {
+  padding: 1rem;
+  background: hsl(0deg, 0%, 70%);
+  box-shadow: 0 0.1rem 0.3rem black;
+  border-radius: 1rem;
+}
+
+.filter {
+  margin: 1rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.planned-entries {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.entry {
+  display: grid;
+  grid-gap: 0.5em;
+}
+
+.quick-actions {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+.quick-actions li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quick-actions label, .quick-actions input[type=button] {
+  background-color: hsl(0deg, 0%, 80%);
+}
+.quick-actions label {
+  padding: 0.5rem;
+  border-radius: 0.5em;
+  box-shadow: 0 0.1rem 0.3rem black;
+  font-size: 90%;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: width 0.2s;
+}
+.quick-actions input[type=button] {
+  display: block;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 3rem;
+  box-shadow: 0 0.1rem 0.3rem black;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -6,8 +6,14 @@
     {
       "label": "compile-scss",
       "type": "shell",
-      "command": "sass _style.scss style.css",
-      "group": "build"
+      "command": "sass --watch _style.scss style.css",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }
