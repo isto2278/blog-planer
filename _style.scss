@@ -65,7 +65,7 @@ input, select, button {
 
 .planned-entries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: $gap;
   padding-bottom: $gap;
 }
@@ -97,7 +97,7 @@ input, select, button {
   }
 
   label {
-    padding: .5rem;
+    padding: .5rem 1rem;
     border-radius: .5em;
     box-shadow: $shadow;
     font-size: 90%;
