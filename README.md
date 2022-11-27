@@ -1,1 +1,1 @@
-# devoted-nonsense-planer
+# Blog Planner
