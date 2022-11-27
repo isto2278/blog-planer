@@ -7,6 +7,8 @@
   <title>Devoted Nonsense</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/01313f670a.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="js/planer.js"></script>
 </head>
 <body>
   <main>
